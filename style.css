@@ -54,7 +54,8 @@
     font-size: 1.5rem;
     position: relative;
     padding: 0px 10px;
-    height: 3rem;
+    height: 3.25rem;
+    line-height: 2.5rem;
     text-decoration: none;
     color: #4d2a00;
     box-sizing: border-box;
@@ -101,15 +102,11 @@
     width: auto;
     align-self: center;
     border-radius: 50%;
+    transition: all 1.5s ease-in-out;
 }
 
 .side .blurb img:hover {
-    animation: 1.5s ease-in-out 0s rotating;
-}
-
-@keyframes rotating {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    cursor: pointer;
 }
 
 .side footer {
@@ -168,11 +165,8 @@
     height: 100vh;
     display: grid;
     grid-template: 1fr / 3fr 1fr;
-}
-
-.scroll {
-    transform: translateY(-100%);
     transition: all 1s;
+    z-index: 50;
 }
 
 .curve {
