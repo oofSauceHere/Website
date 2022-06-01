@@ -6,6 +6,12 @@ function scroll() {
         document.getElementById('about').style.transform = "translateY(100%)";
     }
 
+    document.getElementById('side').style.transform = "translateX(100%)";
+    document.getElementById('side').style.visibility = "hidden";
+
+    document.getElementById('nav').style.visibility = "visible";
+    document.getElementById('nav').style.transform = "translateX(-5vw)";
+
     i *= -1;
 }
 
