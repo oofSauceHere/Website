@@ -8,6 +8,32 @@
     color:#4d2a00;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1924px) {
+    :root {
+        --hero-header-font-size: 7.5rem;
+        --side-nav-font-size: 0.75rem;
+        --btn-square-side: 66.7px;
+        --btn-font-size: 2rem;
+        --drop-shadow: 6.7px;
+        --side-margin: 10px;
+        --side-element-margin: 12.5px;
+        --side-blurb-font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1925px) {
+    :root {
+        --hero-header-font-size: 15rem;
+        --side-nav-font-size: 1.5rem;
+        --btn-square-side: 100px;
+        --btn-font-size: 3rem;
+        --drop-shadow: 10px;
+        --side-margin: 25px;
+        --side-element-margin: 50px;
+        --side-blurb-font-size: 3rem;
+    }
+}
+
 .hero {
     width: 100vw;
     height: 100vh;
@@ -25,7 +51,7 @@
 }
 
 .content h1 {
-    font-size: 15rem;
+    font-size: var(--hero-header-font-size);
     font-weight: 400;
     letter-spacing: 0.1em;
     padding-top: 20vh;
@@ -51,11 +77,10 @@
 
 .side a {
     display: inline;
-    font-size: 1.5rem;
+    font-size: var(--side-nav-font-size);
     position: relative;
     padding: 0px 10px;
-    height: 3.25rem;
-    line-height: 2.5rem;
+    line-height: calc(1.5 * var(--side-nav-font-size));
     text-decoration: none;
     color: #4d2a00;
     box-sizing: border-box;
@@ -72,11 +97,11 @@
     height: 25%;
     display: flex;
     justify-content: space-between;
-    margin: 0px 50px;
+    margin: 0px var(--side-element-margin);
 }
 
 .side nav a {
-    top: 25px;
+    top: var(--side-margin);
 }
 
 .side .blurb {
@@ -86,15 +111,15 @@
 }
 
 .side .blurb h1 {
-    font-size: 4.5rem;
+    font-size: calc(1.25 * var(--side-blurb-font-size));
     font-weight: 400;
-    padding-left: 75px;
+    padding-left: calc(2 * var(--side-element-margin));
 }
 
 .side .blurb h2 {
-    font-size: 3rem;
+    font-size: var(--side-blurb-font-size);
     font-weight: 400;
-    padding-left: 75px;
+    padding-left: calc(2 * var(--side-element-margin));
 }
 
 .side .blurb img {
@@ -113,12 +138,12 @@
     height: 25%;
     display: flex;
     justify-content: space-between;
-    margin: 0px 50px;
+    margin: 0px var(--side-element-margin);
     align-items: flex-end;
 }
 
 .side footer a {
-    bottom: 25px;
+    bottom: var(--side-margin);
 }
 
 .action {
@@ -130,14 +155,15 @@
 
 .action button {
     background-color: #ffe4c4;
-    height: 100px;
-    width: 100px;
+    height: var(--btn-square-side);
+    width: var(--btn-square-side);
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotate(180deg);
-    font-size: 3rem;
-    box-shadow: -10px 10px #4d2a00;
+    font-size: var(--btn-font-size);
+    color: #4d2a00;
+    box-shadow: calc(-1*var(--drop-shadow)) var(--drop-shadow) #4d2a00;
     border: none;
     position: relative;
     bottom: 57.5px;
