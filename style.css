@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +36,8 @@
     }
 }
 
+/* HERO */
+
 .nav {
     width: 5vw;
     height: 100%;
@@ -42,7 +46,7 @@
     position: fixed;
     right: -5vw;
     visibility: hidden;
-    transition: all 1s ease-out;
+    transition: transform 1s ease--in-out;
 }
 
 .hero {
@@ -70,16 +74,18 @@
 
 @keyframes slide {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
+}
+
+/* SIDE */
 
 .side {
     animation: 1s ease-out 0s slide;
-    transition: all 1s ease-in;
+    transition: all 1s ease-in-out;
 
     grid-area: 1 / 2 / 1 / 3;
     background-color: #ffe4c4;
@@ -139,7 +145,7 @@
     width: auto;
     align-self: center;
     border-radius: 50%;
-    transition: all 1.5s ease-in-out;
+    transition: transform 1.5s ease-in-out;
 }
 
 .side .blurb img:hover {
@@ -197,32 +203,51 @@
     100% { transform: translate(0, 0px); }   
 }
 
+/* ABOUT */
+
 .about {
-    width: 100vw;
+    width: calc(95vw - 10px);
     height: 100vh;
     display: grid;
-    grid-template: 1fr / 3fr 1fr;
-    transition: all 1s;
-    z-index: 50;
+    grid-template: repeat(12, 1fr) / repeat(20, 1fr);
+    transition: transform 1s;
+    background-color: #d2d3d4;
+    z-index: 50; /* maybe temp */
 }
 
-.curve {
-    height: 100vh;
-    width: 100%;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
+.about .header {
+    grid-area: 2 / 2 / 3 / 12;
+    font-size: calc(100vh/12 - 2vh);
 }
 
-.herocurve1 {
-    background-image: url('curve1.svg');
-    top: 0%;
-    right: 12.5%;
-    z-index: 0;
+.about .terminal {
+    /* somehow i gotta add leaves to this thing */
+    grid-area: 3 / 2 / 10 / 12;
+    border: solid #33373d;
+    background-color: #241500;
+    border-width: 30px 30px;
+    box-shadow: 25px 0px #1c1e21;
+    padding: 5px 10px;
 }
 
-.herocurve2 {
-    background-image: url('curve2.svg');
+.about .screen {
+    grid-area: 2 / 13 / 7 / 20;
+    border: solid #33373d;
+    background-color: #241500;
+    border-width: 30px 30px;
+    box-shadow: 25px 0px #1c1e21;
+    padding: 5px 10px;
+}
+
+.about .computer {
+    grid-area: 8 / 13 / 12 / 20;
+    border: solid #860505;
+    background-color: #860505;
+    border-width: 30px 30px;
+    box-shadow: 25px 0px #540303;
+    padding: 5px 10px;
+}
+
+.about .terminal h1 {
+    color: #bd6e00;
 }
