@@ -1,3 +1,5 @@
+/* this entire thing is scuffed */
+
 let i = 1;
 function scroll() {
     if(i === 1) {

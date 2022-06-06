@@ -46,7 +46,23 @@
     position: fixed;
     right: -5vw;
     visibility: hidden;
-    transition: transform 1s ease--in-out;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    margin: 1em;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #ffe4c4;
+}
+
+/* consider changing hover effect to change bg color to dark tan */
+.nav a:hover {
+    border-color: #4d2a00;
 }
 
 .hero {
