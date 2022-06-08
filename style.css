@@ -46,7 +46,7 @@
     position: fixed;
     right: -5vw;
     visibility: hidden;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,15 +54,21 @@
 }
 
 .nav a {
-    margin: 1em;
+    padding: 5px 10px;
+    font-size: var(--side-nav-font-size);
+    line-height: calc(1.5 * var(--side-nav-font-size));
+    height: calc(1.5 * var(--side-nav-font-size) + 20px);
+    margin: 0.5em;
     box-sizing: border-box;
     border-style: solid;
     border-color: #ffe4c4;
+    transition: border-color 250ms;
 }
 
 /* consider changing hover effect to change bg color to dark tan */
 .nav a:hover {
     border-color: #4d2a00;
+    background-color: #ffb65c;
 }
 
 .hero {
@@ -113,18 +119,21 @@
     display: inline;
     font-size: var(--side-nav-font-size);
     position: relative;
-    padding: 0px 10px;
+    padding: 5px 10px;
     line-height: calc(1.5 * var(--side-nav-font-size));
+    height: calc(1.5 * var(--side-nav-font-size) + 20px);
     text-decoration: none;
     color: #4d2a00;
     box-sizing: border-box;
     border-style: solid;
     border-color: #ffe4c4;
+    background-color: #ffe4c4;
     transition: border-color 250ms;
 }
 
 .side a:hover {
     border-color: #4d2a00;
+    background-color: #ffb65c;
 }
 
 .side nav {
@@ -233,7 +242,8 @@
 
 .about .header {
     grid-area: 2 / 2 / 3 / 12;
-    font-size: calc(100vh/12 - 2vh);
+    font-size: calc(100vh/12 - 1vh);
+    line-height: calc(100vh/12 - 2vh);
 }
 
 .about .terminal {
@@ -242,7 +252,7 @@
     border: solid #33373d;
     background-color: #241500;
     border-width: 30px 30px;
-    box-shadow: 25px 0px #1c1e21;
+    box-shadow: 35px 0px #1c1e21;
     padding: 5px 10px;
 }
 
@@ -251,7 +261,7 @@
     border: solid #33373d;
     background-color: #241500;
     border-width: 30px 30px;
-    box-shadow: 25px 0px #1c1e21;
+    box-shadow: 35px 0px #1c1e21;
     padding: 5px 10px;
 }
 
@@ -266,4 +276,24 @@
 
 .about .terminal h1 {
     color: #bd6e00;
+}
+
+/* PROJECTS */
+
+.projects {
+    width: calc(95vw - 10px);
+    height: 100vh;
+    display: grid;
+    /* grid-template: repeat(12, 1fr) / repeat(20, 1fr); */
+    transition: transform 1s;
+    background-color: #d2d3d4;
+    z-index: 50; /* maybe temp */
+}
+
+.projects .left-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
