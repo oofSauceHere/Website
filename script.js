@@ -10,7 +10,7 @@ function scroll() {
     document.getElementById('action-btn').style.pointerEvents = "none";
     if(i === 1) {
         // document.getElementById('about').style.transform = "translateY(-100%)";
-        document.getElementById('contact').style.transform = "translateY(-100%)";
+        document.getElementById('projects').style.transform = "translateY(-100%)";
 
         document.getElementById('side').style.transform = "translateX(100%)";
         document.getElementById('side').style.visibility = "hidden";
@@ -21,7 +21,7 @@ function scroll() {
         }, 1000);
     } else {
         // document.getElementById('about').style.transform = "translateY(100%)";
-        document.getElementById('contact').style.transform = "translateY(100%)";
+        document.getElementById('projects').style.transform = "translateY(100%)";
 
         document.getElementById('nav').style.transform = "translateX(0%)";
         setTimeout(() => {
